@@ -21,4 +21,3 @@ Emotion-Based Filtering: Choose how you want the book to feel—Happy, Sad, Susp
 Genre Selection: Filter recommendations by category (e.g., Romance, Mystery, Fiction).
 
 Visual Previews: See cover thumbnails and short summaries of recommended books.
-https://d95e8924372e74748d.gradio.live/ (live only for a week)
