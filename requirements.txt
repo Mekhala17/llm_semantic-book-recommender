@@ -1,0 +1,9 @@
+pandas
+numpy
+gradio
+langchain
+langchain-community
+langchain-openai
+langchain-text-splitters
+chromadb
+python-dotenv
