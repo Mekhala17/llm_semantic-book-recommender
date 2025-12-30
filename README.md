@@ -1,23 +1,115 @@
-# llm_semantic-book-recommender
-Semantic Book Recommender is an AI-powered project that suggests books based on user-inputted descriptions and emotional tone. It uses Hugging Face models and ChromaDB for semantic search — no API key required.
+# 📚 Semantic Book Recommender
 
-An intelligent book recommendation system that understands your feelings, preferences, and description of a story—and recommends books that emotionally and thematically match your input.
+An **AI-powered semantic book recommendation system** that suggests books based on **natural language descriptions**, **genre preferences**, and **emotional tone**.  
+The system leverages **Hugging Face sentence embeddings**, **LangChain**, **ChromaDB**, and an interactive **Gradio dashboard** — with **no external API keys required**.
 
-Built with:
+---
 
-💬 Natural Language Understanding using Hugging Face Transformers
+## 🚀 Project Overview
 
-🔍 Semantic Search with ChromaDB
+Traditional recommendation systems rely on keywords or ratings.  
+This project goes beyond that by using **semantic search** to understand *what the user means*, not just what they type.
 
-🎨 Interactive UI using Gradio
+Users can:
+- Describe the kind of book they want in plain English
+- Filter by category (genre)
+- Select an emotional tone (happy, sad, suspenseful, etc.)
+- Instantly receive visually rich book recommendations
 
-📊 Emotion-Aware Filtering based on joy, sadness, anger, fear, and surprise scores
+---
 
-🔧 Features
-Semantic Recommendations: Enter a sentence like "a story of betrayal and redemption", and get books with similar themes.
+## 🧠 How It Works
 
-Emotion-Based Filtering: Choose how you want the book to feel—Happy, Sad, Suspenseful, Angry, or Surprising.
+1. **Book Descriptions Processing**
+   - Book metadata and descriptions are preprocessed and stored.
+   - Descriptions are tagged and chunked for efficient semantic retrieval.
 
-Genre Selection: Filter recommendations by category (e.g., Romance, Mystery, Fiction).
+2. **Embeddings**
+   - Uses the Hugging Face model:
+     ```
+     sentence-transformers/all-MiniLM-L6-v2
+     ```
+   - Converts text into dense vector embeddings.
 
-Visual Previews: See cover thumbnails and short summaries of recommended books.
+3. **Vector Database**
+   - Embeddings are stored in **ChromaDB**
+   - Enables fast semantic similarity search
+
+4. **Recommendation Logic**
+   - Retrieves top semantically similar books
+   - Applies category filtering (optional)
+   - Ranks results based on emotional tone scores (joy, fear, anger, etc.)
+
+5. **User Interface**
+   - Built with **Gradio**
+   - Clean, responsive, and interactive UI
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python**
+- **Pandas & NumPy** – data handling
+- **LangChain** – document loading & orchestration
+- **ChromaDB** – vector storage
+- **Hugging Face Transformers** – embeddings
+- **Gradio** – web-based dashboard
+- **dotenv** – environment management
+
+---
+
+## 📂 Project Structure
+
+├── gradio_dashboard.py # Main application file (Gradio UI + recommendation logic)
+├── books_with_emotions.csv # Book metadata with emotion scores
+├── books_with_categories.csv # Genre/category information
+├── books_cleaned.csv # Cleaned and preprocessed book dataset
+├── tagged_description.txt # Tagged book descriptions for semantic search
+├── cover-not-found.jpg # Fallback image for missing book covers
+├── requirements.txt # Python dependencies
+├── README.md # Project documentation
+├── *.ipynb # Jupyter notebooks for EDA and experiments
+
+---
+
+## 🎨 Features
+
+- 🔍 **Semantic Search**  
+  Understands user intent using vector embeddings rather than keyword matching.
+
+- 😊 **Emotion-Aware Recommendations**  
+  Books are ranked based on emotional tone such as happy, sad, suspenseful, or surprising.
+
+- 📚 **Category Filtering**  
+  Allows users to filter recommendations by book genre.
+
+- 🖼️ **Book Cover Previews**  
+  Displays book thumbnails with a fallback image when unavailable.
+
+- ⚡ **Fast & Lightweight Embeddings**  
+  Powered by `sentence-transformers/all-MiniLM-L6-v2` for efficient semantic search.
+
+- 🔐 **No API Keys Required**  
+  Fully open-source solution using Hugging Face models.
+
+---
+
+## 📈 Example Use Cases
+
+- *“A heartwarming story about friendship and personal growth”*  
+- *“Dark, suspenseful novels with mystery elements”*  
+- *“Light and happy books for casual reading”*
+
+---
+
+## 🔮 Future Improvements
+
+- User authentication and personalized recommendations
+- Recommendation history and bookmarking
+- Advanced ranking and reranking strategies
+- Deployment on Hugging Face Spaces or cloud platforms
+- Multilingual semantic book search
+
+  ---
+
+  ##
