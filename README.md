@@ -60,15 +60,24 @@ Users can:
 
 ## 📂 Project Structure
 
-├── gradio_dashboard.py # Main application file (Gradio UI + recommendation logic)
-├── books_with_emotions.csv # Book metadata with emotion scores
-├── books_with_categories.csv # Genre/category information
-├── books_cleaned.csv # Cleaned and preprocessed book dataset
-├── tagged_description.txt # Tagged book descriptions for semantic search
-├── cover-not-found.jpg # Fallback image for missing book covers
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
-├── *.ipynb # Jupyter notebooks for EDA and experiments
+├── gradio_dashboard.py -Main application file (Gradio UI + recommendation logic)
+
+├── books_with_emotions.csv -Book metadata with emotion scores
+
+├── books_with_categories.csv -Genre/category information
+
+├── books_cleaned.csv -Cleaned and preprocessed book dataset
+
+├── tagged_description.txt -Tagged book descriptions for semantic search
+
+├── cover-not-found.jpg -Fallback image for missing book covers
+
+├── requirements.txt -Python dependencies
+
+├── README.md -Project documentation
+
+├── *.ipynb -Jupyter notebooks for EDA and experiments
+
 
 ---
 
