@@ -112,4 +112,7 @@ Users can:
 
   ---
 
-  ##
+  ## Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/Ui0UJn31VRk/0.jpg)](https://youtu.be/Ui0UJn31VRk)
+
